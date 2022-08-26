@@ -12,8 +12,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Link from '@mui/material/Link';
 
-const pages = ['About', 'What We Do', 'Gallery', "Contact"];
+const pages = [['About', "#about"], ['What We Do', "#whatWeDo"], ['Gallery', "#gallery"], ["Contact", "#contact"]];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -88,8 +89,8 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page[0]} onClick={handleCloseNavMenu}>
+                  <Link href = {page[1]}><Typography textAlign="center">{page[0]}</Typography></Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -115,13 +116,15 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+                <Link href = {page[1]}>
               <Button
-                key={page}
+                key={page[0]}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page[0]}
               </Button>
+              </Link>
             ))}
           </Box>
 

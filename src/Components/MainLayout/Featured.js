@@ -1,0 +1,16 @@
+import featured from "../../assets/featured.mp4";
+
+const Featured = () => {
+    return (
+        <div className="featured" id = "whatWeDo">
+            <h1>What We Do</h1>
+            <p className = "font-memphis">Perhaps an example is a thousand times greater than words. </p>
+            <p >Check out our featured video!</p>
+            <video controls>
+                <source src={featured} type="video/mp4" />
+            </video>
+        </div>
+    );
+}
+
+export default Featured;

@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import heroSmall from "./assets/hero-small.jpg";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Button from "@mui/material/Button";
-
+import Link from "@mui/material/Link";
 const Hero = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
@@ -46,7 +46,7 @@ const Hero = () => {
         <Container maxWidth={false}  disableGutters={true}>
         <Box mt = {0} sx ={{px:0}} id = "hero-box">
             <img alt="hero" id = "hero-img"/>
-            <Button variant="outlined" id = "heroButton" disableElevation sx = {{position: "absolute", bottom: 200}}>Get Started</Button>
+            <Link href = "#about"><Button variant="outlined" id = "heroButton" disableElevation sx = {{position: "absolute", bottom: 200}}>Get Started</Button></Link>
         </Box>
         </Container>
     );

@@ -16,7 +16,7 @@ const theme = createTheme({
   });
 const About = () => {
     return (
-        <Grid container id = "aboutContainer" spacing= {2} mt = {5}>
+        <Grid container spacing= {2} mt = {5} id = "about">
             <Grid item xs = {1} md = {3}>
 
             </Grid>
