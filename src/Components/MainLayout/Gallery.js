@@ -21,7 +21,7 @@ const icon = (
 //       />
 //     </Box>
 //   </Paper>
-    <Skeleton variant = "rectangular" animation = "wave" height = {400} width = {400} sx ={{backgroundColor: "#a1bcfc", mt: 2}}/>
+    <Skeleton variant = "rectangular" animation = "wave" sx ={{backgroundColor: "#a1bcfc", mt: 2, height: {xs: 200, sm: 400}, width: {xs: 200, sm: 400}}}/>
 );
 
 export default function Gallery() {
@@ -34,6 +34,7 @@ export default function Gallery() {
   useEffect(() => {
     if(!checked){
         document.getElementById("gallery").style.height = "200px";
+
     }else{
         document.getElementById("gallery").style.height = "auto";
     }
