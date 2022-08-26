@@ -159,5 +159,8 @@ svg:hover{
   -ms-border-radius: 100vw;
   -o-border-radius: 100vw;
 }
+#gallery{
+  overflow: hidden;
+}
 
 /* end of scrollbar styles */

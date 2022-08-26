@@ -4,6 +4,7 @@ import MainLayout from './Components/Main';
 import ResponsiveAppBar from './Components/Header';
 import {useEffect} from 'react';
 import $ from 'jquery';
+import Footer from './Components/Footer';
 function App() {
   useEffect(()=>{
     $('a[href*="#"]')
@@ -47,6 +48,7 @@ function App() {
     <>
       <ResponsiveAppBar />
     <MainLayout />
+    <Footer />
     </>
   );
 }
