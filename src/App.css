@@ -103,3 +103,9 @@
   justify-content: center;
   margin-top: 50px;
 }
+video{
+  max-width: 90vw;
+}
+#whatWeDo>p{
+  text-align: center;
+}
