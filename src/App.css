@@ -109,3 +109,55 @@ video{
 #whatWeDo>p{
   text-align: center;
 }
+#social-media{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  margin-top: 50px;
+}
+svg{
+  width: 40px;
+  height: 40px;
+}
+svg:hover{
+  transform: scale(1.1);
+}
+#Owner{
+  left: 0 !important;
+  right: 0 !important;
+  margin-left: auto !important; 
+  margin-right: auto !important; 
+  width: 200px;
+}
+#Owner>p{
+  text-align: center;
+
+}
+#Owner>p>span{
+  color: rgba(32, 32, 168, 0.918);
+  text-decoration: underline;
+}
+#Owner>p>span:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+  .content{
+    font-size: 14px !important;
+  }
+}
+/* start of scrollbar styles */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-thumb{
+  background: #2d3f47;
+  border-radius: 100vw;
+  -webkit-border-radius: 100vw;
+  -moz-border-radius: 100vw;
+  -ms-border-radius: 100vw;
+  -o-border-radius: 100vw;
+}
+
+/* end of scrollbar styles */

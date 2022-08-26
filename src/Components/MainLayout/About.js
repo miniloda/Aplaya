@@ -24,7 +24,7 @@ const About = () => {
             <Box mt = {0} sx ={{px:0, display: "flex", justifyContent : "center", flexDirection: "column", alignItems: "center"}} id = "aboutBox">
                 <h1>About</h1>
                 <ThemeProvider theme = {theme}>
-                <Typography variant = "caption" className = "font-memphis" align = "center"> 
+                <Typography variant = "caption" className = "font-memphis content" align = "center"> 
                 We are a multimedia company striving to design the world a better place. <br></br>
                 <br></br>
                 Atque nesciunt fugiat consequatur quisquam at, facilis unde laborum pariatur laudantium ipsum nulla id quaerat repellat minima. Earum veritatis id neque quod?
