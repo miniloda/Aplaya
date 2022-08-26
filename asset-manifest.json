@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aplaya/static/css/main.2c4d60ee.css",
+    "main.css": "/aplaya/static/css/main.cdd95b96.css",
     "main.js": "/aplaya/static/js/main.55aced57.js",
     "static/js/787.7dace35b.chunk.js": "/aplaya/static/js/787.7dace35b.chunk.js",
     "static/media/featured.mp4": "/aplaya/static/media/featured.27d4b877513566aa3a68.mp4",
@@ -17,12 +17,12 @@
     "static/media/inter-vietnamese-400-normal.woff2": "/aplaya/static/media/inter-vietnamese-400-normal.789afb71d327988e2fc8.woff2",
     "index.html": "/aplaya/index.html",
     "static/media/logo.svg": "/aplaya/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "main.2c4d60ee.css.map": "/aplaya/static/css/main.2c4d60ee.css.map",
+    "main.cdd95b96.css.map": "/aplaya/static/css/main.cdd95b96.css.map",
     "main.55aced57.js.map": "/aplaya/static/js/main.55aced57.js.map",
     "787.7dace35b.chunk.js.map": "/aplaya/static/js/787.7dace35b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c4d60ee.css",
+    "static/css/main.cdd95b96.css",
     "static/js/main.55aced57.js"
   ]
 }
