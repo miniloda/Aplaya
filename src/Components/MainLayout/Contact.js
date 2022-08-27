@@ -55,10 +55,9 @@ export default function Contact(){
         document.querySelector(".contact-info").style.height = formHeight + "px";
       }
     }
-    window.addEventListener("scroll", handleResize);
     handleResize();
     return () => {
-        window.removeEventListener("scroll", handleResize);
+        window.removeEventListener("resize", handleResize);
     }
 });
 
@@ -159,7 +158,6 @@ export default function Contact(){
           <Box sx = {{display:"flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
               <h1>Our Location</h1>
               <iframe
-              width="600"
               height="450"
               style={{border:0}}
               loading="lazy"
