@@ -1,12 +1,18 @@
 {
   "files": {
-    "main.css": "/Aplaya/static/css/main.6603d7c2.css",
-    "main.js": "/Aplaya/static/js/main.aac3eb7b.js",
+    "main.css": "/Aplaya/static/css/main.80c54949.css",
+    "main.js": "/Aplaya/static/js/main.613c97d4.js",
     "static/js/787.7dace35b.chunk.js": "/Aplaya/static/js/787.7dace35b.chunk.js",
     "static/media/featured.mp4": "/Aplaya/static/media/featured.27d4b877513566aa3a68.mp4",
     "static/media/hero.jpg": "/Aplaya/static/media/hero.bd2fe57e5921648c0fb0.jpg",
+    "static/media/Image6.jpg": "/Aplaya/static/media/Image6.aa6d50b17a88a9f78edd.jpg",
     "static/media/hero-small.jpg": "/Aplaya/static/media/hero-small.9a4a13998e74c00e29e5.jpg",
+    "static/media/Image2.jpg": "/Aplaya/static/media/Image2.20a987c07b25fa091f96.jpg",
+    "static/media/Image4.jpg": "/Aplaya/static/media/Image4.2ba31878846b37aef605.jpg",
+    "static/media/Image3.jpg": "/Aplaya/static/media/Image3.30aa35a7225ea9198514.jpg",
+    "static/media/Image1.jpg": "/Aplaya/static/media/Image1.1269f47f8efff9648926.jpg",
     "static/media/inter-all-400-normal.woff": "/Aplaya/static/media/inter-all-400-normal.8c804432e8c67741aac0.woff",
+    "static/media/Image5.jpg": "/Aplaya/static/media/Image5.c214f1986c99a9b2b34d.jpg",
     "static/media/Memphis-LT-Std-Light.otf": "/Aplaya/static/media/Memphis-LT-Std-Light.c03150cf89c8398a48ed.otf",
     "static/media/inter-latin-ext-400-normal.woff2": "/Aplaya/static/media/inter-latin-ext-400-normal.3a7a76525d98d25962eb.woff2",
     "static/media/inter-latin-400-normal.woff2": "/Aplaya/static/media/inter-latin-400-normal.be7cb18dc7caf47cf7e9.woff2",
@@ -18,12 +24,12 @@
     "static/media/logo.svg": "/Aplaya/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/Git_icon.svg": "/Aplaya/static/media/Git_icon.dd8f1dcaa3e71f534f3f73bb8e6c2d2b.svg",
     "index.html": "/Aplaya/index.html",
-    "main.6603d7c2.css.map": "/Aplaya/static/css/main.6603d7c2.css.map",
-    "main.aac3eb7b.js.map": "/Aplaya/static/js/main.aac3eb7b.js.map",
+    "main.80c54949.css.map": "/Aplaya/static/css/main.80c54949.css.map",
+    "main.613c97d4.js.map": "/Aplaya/static/js/main.613c97d4.js.map",
     "787.7dace35b.chunk.js.map": "/Aplaya/static/js/787.7dace35b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6603d7c2.css",
-    "static/js/main.aac3eb7b.js"
+    "static/css/main.80c54949.css",
+    "static/js/main.613c97d4.js"
   ]
 }
