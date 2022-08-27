@@ -164,3 +164,15 @@ svg:hover{
 }
 
 /* end of scrollbar styles */
+
+.not-seen{
+  margin-top: 100px !important;
+}
+.enter{
+  margin-top: 0px !important;
+  transition: margin-top 500ms ease-out;
+  -webkit-transition: margin-top 500ms ease-out;
+  -moz-transition: margin-top 500ms ease-out;
+  -ms-transition: margin-top 500ms ease-out;
+  -o-transition: margin-top 500ms ease-out;
+}

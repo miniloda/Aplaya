@@ -3,6 +3,9 @@ import Box from '@mui/material/Box';
 import "@fontsource/inter";
 import {createTheme, ThemeProvider} from '@material-ui/core/styles';
 import { Typography } from '@mui/material';
+import {Transition} from "react-transition-group";
+import {useState, useRef, useEffect} from "react";
+import useOnScreen from '../shared/Observe';
 const theme = createTheme({
     typography: {
     caption:{
@@ -15,8 +18,23 @@ const theme = createTheme({
     }
   });
 const About = () => {
+    const elementRef = useRef(null)
+  const  isOnScreen= useOnScreen(elementRef)
+  console.log({isOnScreen})
+    const [transitionState, setTransitionState] = useState(false)
+    useEffect(() => {
+        if(isOnScreen){
+            document.querySelector("#about").classList.add("enter");
+        }
+
+      return () => {
+        // cleanup
+      };
+    }, [isOnScreen]);
+
     return (
-        <Grid container spacing= {2} mt = {5} id = "about">
+
+        <Grid container spacing= {2} mt = {5} id = "about" className = "not-seen" ref = {elementRef}>
             <Grid item xs = {1} md = {3}>
 
             </Grid>
