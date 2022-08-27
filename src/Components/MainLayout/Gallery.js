@@ -31,10 +31,10 @@ export default function Gallery() {
     }
   }, [checked]);
   return (
-    <Grid container spacing={3} gutterBottom>
+    <Grid container spacing={0} gutterBottom sx ={{px:{sm:0}}}>
         <Grid item xs={0} sm = {2}>
         </Grid>
-        <Grid item xs={12} sm = {8}>
+        <Grid item xs={12} sm = {8} sx ={{px:0}}>
     <Box sx = {{display: "flex", flexDirection: "column", alignItems: "center", width: "100%"}}>
         <h1>Gallery</h1>
     <Box sx ={{width: "100%"}}>
@@ -45,7 +45,7 @@ export default function Gallery() {
       />
       <Box sx={{ display: 'flex', justifyContent: "space-around", flexWrap : "wrap", alignItems: "center"}} id = "gallery">
         <Grow in={checked}>
-          <img src = {Image1} alt = "Image1" width = "400" height = "400"/>
+          <img src = {Image1} alt = "Image1" />
         </Grow>
         {/* Conditionally applies the timeout prop to change the entry speed. */}
         <Grow
@@ -53,35 +53,35 @@ export default function Gallery() {
           style={{ transformOrigin: '0 0 0' }}
           {...(checked ? { timeout: 1000 } : {})}
         >
-          <img src = {Image2} alt = "Image2" width = "400" height = "400" />
+          <img src = {Image2} alt = "Image2" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 1500} : {})}
         >
-          <img src = {Image3} alt = "Image3" width = "400" height = "400" />
+          <img src = {Image3} alt = "Image3" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 2000} : {})}
         >
-          <img src = {Image4} alt = "Image1" width = "400" height = "400" />
+          <img src = {Image4} alt = "Image4" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 2500} : {})}
         >
-          <img src = {Image5} alt = "Image2" width = "400" height = "400" />
+          <img src = {Image5} alt = "Image2" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 3000} : {})}
         >
-          <img src = {Image6} alt = "Image3" width = "400" height = "400" />
+          <img src = {Image6} alt = "Image3" />
         </Grow>
         </Box>
       </Box>

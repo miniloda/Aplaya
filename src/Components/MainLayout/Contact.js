@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
@@ -15,8 +15,37 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { Phone } from '@mui/icons-material';
 
 export default function Contact(){
+    const form = useRef();
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [category, setCategory] = useState('query');
+    const [message, setMessage] = useState('');
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('firstName 👉️', firstName);
+    console.log('lastName 👉️', lastName);
+    let formFull = {
+      fullName: firstName + ' ' + lastName,
+      phone: phone,
+      email: email,
+      category: category,
+      message: message
+    }
+    emailjs.sendForm('service_l6salqy', 'template_vm90xjw', form.current, 'y6NRT097ze0-vgHJM')
+      .then((result) => {
+          console.log(result.text);
+          alert('Your message has been sent!');
+      }, (error) => {
+          console.log(error.text);
+          alert('Your message has not been sent!');
+      });
+  };
   let formHeight;
   useEffect(() => {
     const handleResize = () => {
@@ -81,37 +110,42 @@ export default function Contact(){
           <Paper elevation = {24} square className = "cardField">
         <Card style={{ padding: "20px 5px", margin: "0 auto" }} className = "cardField paper">
           <CardContent>
-            <form>
+            <form ref= {form} onSubmit = {sendEmail}>
               <Grid container spacing={1} >
                 <Grid xs={12} sm={6} item>
-                  <TextField placeholder="Enter first name" label="First Name" variant="filled" fullWidth required />
+                  <TextField placeholder="Enter first name" label="First Name" variant="filled" fullWidth required id = "first_name"  onChange={event => setFirstName(event.target.value)}
+          value={firstName} name = "firstName"/>
                 </Grid>
                 <Grid xs={12} sm={6} item>
-                  <TextField placeholder="Enter last name" label="Last Name" variant="filled" fullWidth required />
+                  <TextField placeholder="Enter last name" label="Last Name" variant="filled" fullWidth required id = "last_name"  onChange={event => setLastName(event.target.value)} name = "LastName"
+          value={lastName}/>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type="email" placeholder="Enter email" label="Email" variant="filled" fullWidth required />
+                  <TextField type="email" placeholder="Enter email" label="Email" variant="filled" fullWidth required id = "email"  onChange={event => setEmail(event.target.value)}
+          value={email} name = "email"/>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type="number" placeholder="Enter phone number" label="Phone" variant="filled" fullWidth required />
+                  <TextField type="number" placeholder="Enter phone number" label="Phone" variant="filled" fullWidth required id = "phone"  onChange={event => setPhone(event.target.value)}
+          value={phone} name = "phone"/>
                 </Grid>
                 <Grid item xs = {12}>
                 <FormLabel id="demo-row-radio-buttons-group-label">Message Category</FormLabel>
                         <RadioGroup
                         row
                         aria-labelledby="demo-row-radio-buttons-group-label"
-                        name="row-radio-buttons-group"
+                        name="category"
                     >
-                        <FormControlLabel value="female" control={<Radio />} label="Query" />
-                        <FormControlLabel value="male" control={<Radio />} label="Reservation" />
-                        <FormControlLabel value="other" control={<Radio />} label="Concern" />
+                        <FormControlLabel value="query" control={<Radio />} label="Query" />
+                        <FormControlLabel value="reservation" control={<Radio />} label="Reservation" />
+                        <FormControlLabel value="concern" control={<Radio />} label="Concern" />
                     </RadioGroup>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="filled" fullWidth required />
+                  <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="filled" fullWidth required id = "message"  onChange={event => setMessage(event.target.value)}
+          value={message} name = "message" />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary">Submit</Button>
+                  <Button type="submit" variant="contained" color="primary" value= "Send">Submit</Button>
                 </Grid>
 
               </Grid>

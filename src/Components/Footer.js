@@ -12,7 +12,7 @@ const Footer = () => {
                 <Box sx = {{display: "flex", alignItems: "center", justifyContent: "center", width: "100%"}}>
                     <span>Designed and built by <Link href = "https://github.com/miniloda" noopener="true" target="_blank"> miniloda</Link>
                     <Link href = "https://github.com/miniloda/Aplaya" noopener = "true" target = "_blank">
-                        <img src={Git_icon} alt="Github" height = "20"></img>
+                        <img src={Git_icon} alt="Github" height = "20" id = "footer-img"></img>
                     </Link>
                     </span>
                 </Box>
