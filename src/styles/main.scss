@@ -1,0 +1,75 @@
+#contact-container{
+    display: flex;
+    background:white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius:4px;
+    px-webkit-border-radius: 4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    -webkit-border-radius:4px;
+    .contact-info{
+        box-sizing: border-box;
+        background-color: #5904c2;
+        border-radius: 15px ;
+        -webkit-border-radius: 15px ;
+        -moz-border-radius: 15px ;
+        -ms-border-radius: 15px ;
+        -o-border-radius: 15px ;
+        color: white;
+        width:100%;
+        padding: 40px;
+        h4{
+            font-size : 2rem;
+            font-weight: 500;
+            margin:0;
+            max-width: 80%;
+        }
+        p{
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            max-width: 80%;
+        }
+        .icon-text{
+            display:flex;
+            align-items:center;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            i{
+                flex : 0 0 20px;
+                font-size: 2.2rem;
+                margin-right: 2rem;
+                font-size: 20px;
+            }
+            span{
+                font-size: 1rem;
+                font-weight:300;
+            }
+        }
+        .social-media{
+            display:flex;
+            width: 50%;
+            justify-content: space-between;
+            .icon-circle{
+                color: white;
+                flex: 0 1 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                border-radius: 50%        ;
+                -webkit-border-radius: 50%        ;
+                -moz-border-radius: 50%        ;
+                -ms-border-radius: 50%        ;
+                -o-border-radius: 50%        ;
+            }
+            .icon-circle:hover{
+                background-color: rgba(255,255,255,0.1);
+            }
+}
+  }
+}
