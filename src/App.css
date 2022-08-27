@@ -176,4 +176,10 @@ svg:hover{
   -ms-transition: margin-top 500ms ease-out;
   -o-transition: margin-top 500ms ease-out;
 }
+iframe{
+  border: #282c34;
+  border-radius: 10px;
+  /* add shadows */
+  box-shadow: 0px 0px 10px #282c34;
 
+}

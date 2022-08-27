@@ -41,8 +41,8 @@ export default function Contact(){
         </Box>
     </Container>
     <Grid container spacing={0} gutterBottom id = "contact">
-        <Grid item xs = {0} sm = {1} md = {1} lg={2} xl = {2}></Grid>
-        <Grid item xs={10} sm = {10} md = {4} lg={3}>
+        <Grid item xs = {1} sm = {1} md = {1} lg={2} xl = {2}></Grid>
+        <Grid item xs={12} sm = {10} md = {4} lg={3}>
         <div id="contact-container">
             <Paper elevation = {24} className = "paper cardField">
             <div className="contact-info">
@@ -121,6 +121,21 @@ export default function Contact(){
             </Paper>
         </Grid>
         </Grid>
+        <Container>
+          <Box sx = {{display:"flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+              <h1>Our Location</h1>
+              <iframe
+              width="600"
+              height="450"
+              style={{border:0}}
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB0LOjKByCUtHYLqjnT-C7qy5fnDoQuIaA&center=9.672948,123.8730022&zoom=16&maptype=satellite"
+              title = "Maps">
+            </iframe>
+          </Box>
+        </Container>
         </>
     )
 }

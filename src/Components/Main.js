@@ -3,6 +3,7 @@ import About from "./MainLayout/About"
 import Featured from "./MainLayout/Featured"
 import Gallery from "./MainLayout/Gallery"
 import Contact from "./MainLayout/Contact"
+import GoogleApiWrapper  from "./MainLayout/Maps"
 const MainLayout = () => {
     return (
         <div>
@@ -11,6 +12,7 @@ const MainLayout = () => {
             <Featured />
             <Gallery />
             <Contact />
+            
         </div>
     )
 }
