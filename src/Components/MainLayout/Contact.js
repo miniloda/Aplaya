@@ -17,30 +17,34 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import { useEffect } from 'react';
 
 export default function Contact(){
+  let formHeight;
   useEffect(() => {
     const handleResize = () => {
-      const formHeight = document.querySelector("#field-grid").offsetHeight;
-      document.querySelector(".contact-info").style.height = formHeight + "px";
-    
+      console.log("resize?")
+      if(document.querySelector("#field-grid") !== null){
+        formHeight = document.querySelector("#field-grid").offsetHeight;
+        document.querySelector(".contact-info").style.height = formHeight + "px";
+      }
     }
+    window.addEventListener("scroll", handleResize);
     handleResize();
     return () => {
-        window.removeEventListener("resize", handleResize);
+        window.removeEventListener("scroll", handleResize);
     }
 });
 
     return(
         <>
-    <Container id = "contact">
+    <Container>
         <Box sx = {{display: "flex", flexDirection: "column", alignItems: "center", width: "100%"}} my = {5} >
             <h1>Interested? Contact Us!</h1>
         </Box>
     </Container>
-    <Grid container spacing={0} gutterBottom>
-        <Grid item xs = {0} sm = {1} md = {2} xl = {3}></Grid>
-        <Grid item xs={10} sm = {10} md = {4} xl = {2}>
+    <Grid container spacing={0} gutterBottom id = "contact">
+        <Grid item xs = {0} sm = {1} md = {1} lg={2} xl = {2}></Grid>
+        <Grid item xs={10} sm = {10} md = {4} lg={3}>
         <div id="contact-container">
-            <Paper elevation = {24}>
+            <Paper elevation = {24} className = "paper cardField">
             <div className="contact-info">
                 <h4>
                     Contact Information
@@ -73,23 +77,23 @@ export default function Contact(){
         </Paper>
         </div>
         </Grid>
-        <Grid item xs = {12} md = {4} id = "field-grid">
-          <Paper elevation = {24} square >
-        <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto", bgcolor : "primary" }}>
+        <Grid item xs = {12} md = {5} id = "field-grid">
+          <Paper elevation = {24} square className = "cardField">
+        <Card style={{ padding: "20px 5px", margin: "0 auto" }} className = "cardField paper">
           <CardContent>
             <form>
               <Grid container spacing={1} >
                 <Grid xs={12} sm={6} item>
-                  <TextField placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                  <TextField placeholder="Enter first name" label="First Name" variant="filled" fullWidth required />
                 </Grid>
                 <Grid xs={12} sm={6} item>
-                  <TextField placeholder="Enter last name" label="Last Name" variant="outlined" fullWidth required />
+                  <TextField placeholder="Enter last name" label="Last Name" variant="filled" fullWidth required />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
+                  <TextField type="email" placeholder="Enter email" label="Email" variant="filled" fullWidth required />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField type="number" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth required />
+                  <TextField type="number" placeholder="Enter phone number" label="Phone" variant="filled" fullWidth required />
                 </Grid>
                 <Grid item xs = {12}>
                 <FormLabel id="demo-row-radio-buttons-group-label">Message Category</FormLabel>
@@ -104,10 +108,10 @@ export default function Contact(){
                     </RadioGroup>
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
+                  <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="filled" fullWidth required />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                  <Button type="submit" variant="contained" color="primary">Submit</Button>
                 </Grid>
 
               </Grid>
