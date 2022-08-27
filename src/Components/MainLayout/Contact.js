@@ -144,7 +144,13 @@ export default function Contact(){
           value={message} name = "message" />
                 </Grid>
                 <Grid item xs={12}>
+                  <Container>
+                  <Box display = "flex" justifyContent="center">
                   <Button type="submit" variant="contained" color="primary" value= "Send">Submit</Button>
+
+                  </Box>
+
+                  </Container>
                 </Grid>
 
               </Grid>
@@ -161,8 +167,8 @@ export default function Contact(){
               height="450"
               style={{border:0}}
               loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB0LOjKByCUtHYLqjnT-C7qy5fnDoQuIaA&center=9.672948,123.8730022&zoom=16&maptype=satellite"
               title = "Maps">
             </iframe>
