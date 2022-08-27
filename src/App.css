@@ -207,3 +207,26 @@ iframe{
   }
   
 }
+#gallery>img{
+  margin: 20px 0;
+}
+.services-box>img{
+  width: 100px;
+  height: 100px;
+}
+.services-paper{
+  background-color: rgba(235, 213, 184, 0.603) !important;
+  height: 300px;
+  width: 300px;
+  margin: 20px 20px;
+}
+.services-box{
+  width: 80%;
+  margin: 0 auto;
+}
+.services-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #60749c;
+}
