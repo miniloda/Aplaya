@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import Paper from '@mui/material/Paper';
@@ -7,22 +7,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Grid from '@mui/material/Grid';
 import Skeleton  from '@mui/material/Skeleton';
 import { useEffect } from 'react';
-const icon = (
-//   <Paper sx={{ m: 1 }} elevation={4}>
-//     <Box component="svg" sx={{ width: 100, height: 100 }}>
-//       <Box
-//         component="polygon"
-//         sx={{
-//           fill: (theme) => theme.palette.common.white,
-//           stroke: (theme) => theme.palette.divider,
-//           strokeWidth: 1,
-//         }}
-//         points="0,100 50,00, 100,100"
-//       />
-//     </Box>
-//   </Paper>
-    <Skeleton variant = "rectangular" animation = "wave" sx ={{backgroundColor: "#a1bcfc", mt: 2, height: {xs: 200, sm: 400}, width: {xs: 200, sm: 400}}}/>
-);
+import Image1 from "./assets/Gallery/Image1.jpg";
+import Image2 from "./assets/Gallery/Image2.jpg";
+import Image3 from "./assets/Gallery/Image3.jpg";
+import Image4 from "./assets/Gallery/Image4.jpg";
+import Image5 from "./assets/Gallery/Image5.jpg";
+import Image6 from "./assets/Gallery/Image6.jpg";
+<Skeleton variant = "rectangular" animation = "wave" sx ={{backgroundColor: "#a1bcfc", mt: 2, height: {xs: 200, sm: 400}, width: {xs: 200, sm: 400}}}/>
 
 export default function Gallery() {
   const [checked, setChecked] = React.useState(false);
@@ -40,12 +31,12 @@ export default function Gallery() {
     }
   }, [checked]);
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} gutterBottom>
         <Grid item xs={0} sm = {2}>
         </Grid>
         <Grid item xs={12} sm = {8}>
     <Box sx = {{display: "flex", flexDirection: "column", alignItems: "center", width: "100%"}}>
-        <h2>Gallery</h2>
+        <h1>Gallery</h1>
     <Box sx ={{width: "100%"}}>
     <Box sx={{ width: "100%" }}>
       <FormControlLabel
@@ -53,42 +44,44 @@ export default function Gallery() {
         label="Show"
       />
       <Box sx={{ display: 'flex', justifyContent: "space-around", flexWrap : "wrap", alignItems: "center"}} id = "gallery">
-        <Grow in={checked}>{icon}</Grow>
+        <Grow in={checked}>
+          <img src = {Image1} alt = "Image1" width = "400" height = "400"/>
+        </Grow>
         {/* Conditionally applies the timeout prop to change the entry speed. */}
         <Grow
           in={checked}
           style={{ transformOrigin: '0 0 0' }}
           {...(checked ? { timeout: 1000 } : {})}
         >
-          {icon}
+          <img src = {Image2} alt = "Image2" width = "400" height = "400" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 1500} : {})}
         >
-        {icon}
+          <img src = {Image3} alt = "Image3" width = "400" height = "400" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 2000} : {})}
         >
-        {icon}
+          <img src = {Image4} alt = "Image1" width = "400" height = "400" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 2500} : {})}
         >
-        {icon}
+          <img src = {Image5} alt = "Image2" width = "400" height = "400" />
         </Grow>
         <Grow
           in = {checked}
         style = {{transformOrigin: '0 0 0'}}
         {...(checked ? {timeout: 3000} : {})}
         >
-        {icon}
+          <img src = {Image6} alt = "Image3" width = "400" height = "400" />
         </Grow>
         </Box>
       </Box>
