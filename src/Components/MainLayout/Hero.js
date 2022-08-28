@@ -78,9 +78,9 @@ const Hero = () => {
                 </Link>
                 </Box>
             <Link href = "#about"><button className = "get-started">Get Started</button></Link>
-            <Box id = "Owner" sx = {{display: "flex", alignItems: "center"}} >
+            {/* <Box id = "Owner" sx = {{display: "flex", alignItems: "center"}} >
             <p >For the owner of this company, please click <span onClick={handleOpen} class = "span-modal">this</span>.</p>
-            </Box>
+            </Box> */}
       </Box>
       <Modal
         open={open}
