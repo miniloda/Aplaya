@@ -66,8 +66,10 @@ export default function Gallery() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
- 
+      
+      <Box sx={{ width: "100%" }}>
         <ImageGallery items={images} showPlayButton = {false} showBullets = {true}/>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Videos

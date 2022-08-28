@@ -268,3 +268,16 @@ iframe{
   font-weight: bold;
   color: #60749c;
 }
+
+
+  .image-gallery-slide-wrapper{
+    width: 90vw;
+    margin: 0 auto;
+    height: auto;
+  }
+  .image-gallery-image{
+    max-width: 80%;
+   width: auto;
+    height: auto;
+  }
+
