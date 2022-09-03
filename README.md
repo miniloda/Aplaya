@@ -1,6 +1,6 @@
 # Aplaya 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and MUI.
 ## Live Server
 This project is live at [https://miniloda.github.io/Aplaya](https://miniloda.github.io/Aplaya)
 ## Available Scripts
