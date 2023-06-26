@@ -80,15 +80,16 @@ export default function Contact(){
                 <p>Contact us in our social media accounts, email, phone number, or fill in the form and we will get back to you in 24 hours</p>
                 <div className="icon-text">
                 <i class="fa-solid fa-phone"></i>
-                    <span>+63919 999 6897</span>
+                    <span>0916 293 0387</span>
                 </div>
                 <div className="icon-text">
                 <i class="fa-solid fa-envelope"></i>
-                <span>aplayafilms@gmail.com</span>
+                <span>
+aplayamultimediastudio@gmail.com</span>
                 </div>
                 <div className="icon-text">
                 <i class="fa-solid fa-location-dot"></i>
-                    <span>Tagbilaran City, Bohol</span>
+                    <span>Penaflor St. Corner Zamora Sts. 6300 Tagbilaran City, Philippines</span>
                     </div>
                 <div className="social-media">
                     <a href= "#" className="icon-circle">

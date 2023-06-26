@@ -45,12 +45,12 @@ class GoogleMapsContainer extends React.Component {
         google = { this.props.google }
         onClick = { this.onMapClick }
         zoom = { 14 }
-        initialCenter = {{ lat: 39.648209, lng: -75.711185 }}
+        initialCenter = {{ lat: 9.663421, lng: 123.855497 }}
       >
         <Marker
           onClick = { this.onMarkerClick }
           title = { 'Changing Colors Garage' }
-          position = {{ lat: 39.648209, lng: -75.711185 }}
+          position = {{ lat: 9.663421, lng: 123.855497}}
           name = { 'Changing Colors Garage' }
         />
         <InfoWindow
